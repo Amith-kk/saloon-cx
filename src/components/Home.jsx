@@ -2,43 +2,38 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-  // State to track hover interaction
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleHoverStart = () => setIsHovered(true); // Trigger hover state
-  const handleHoverEnd = () => setIsHovered(false);  // Reset hover state
+  const handleHoverStart = () => setIsHovered(true);
+  const handleHoverEnd = () => setIsHovered(false);
 
   return (
     <section
       id="home"
       className="bg-dark h-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
-      onMouseEnter={handleHoverStart} // Hover over the entire section (spotlight + text)
-      onMouseLeave={handleHoverEnd}   // Reset hover when leaving the section
+      onMouseEnter={handleHoverStart}
+      onMouseLeave={handleHoverEnd}
     >
-      {/* Irregular Spotlight Effect with Motion */}
+      {/* Spotlight Effect */}
       <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-light opacity-30 clip-light"
-        initial={{ width: '2px', height: '500px', opacity: 0.1 }} // Initial state
-        animate={{ 
-          width: isHovered ? '640px' : '340px',  // Increase size on hover
-          height: isHovered ? '900px' : '600px', // Increase size on hover
-          opacity: isHovered ? 0.7 : 0.3       // Brighten on hover
-        }} // Spotlight reacts to hover
-        transition={{ duration: 0.5 }} // Smooth transition
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gold opacity-30 clip-light"
+        initial={{ width: '2px', height: '500px', opacity: 0.1 }}
+        animate={{
+          width: isHovered ? '640px' : '340px',
+          height: isHovered ? '900px' : '600px',
+          opacity: isHovered ? 0.7 : 0.3,
+        }}
+        transition={{ duration: 0.5 }}
       />
 
-      {/* Interactive Text Section */}
+      {/* Text Content */}
       <div className="relative z-10 flex flex-col items-center">
-        {/* "Coming" is always visible */}
-        <motion.h1
-          className="text-5xl md:text-7xl font-extrabold text-text"
-        >
+        <motion.h1 className="text-5xl md:text-7xl font-extrabold text-lightGold">
           Coming
         </motion.h1>
-        {/* "Soon" appears only when hovered */}
         {isHovered && (
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold text-text"
+            className="text-5xl md:text-7xl font-extrabold text-gold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
