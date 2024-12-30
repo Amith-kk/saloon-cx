@@ -7,11 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#2b2b2b",    // Rich dark background
-        gold: "#d4af37",    // Premium gold for accents
-        lightGold: "#f5e6a7", // Soft gold for highlights
-        yellow: "#ffdc73",  // Bright yellow for interactive elements
-        text: "#ffffff",    // Clean white for readability
+        background: "#edaf05", // Light gray-white background F1F1F1
+        text: "#fcf8ed",       // Grayish white for text D8D8D8
+        hover: "#262625",       // Dark gold for main elements D69B2E
+        gray: "#e0dac8",     // Dark gray for accents 3A3A3A
       },
       fontFamily: {
         sans: ['"Inter"', "sans-serif"],

@@ -1,50 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHoverStart = () => setIsHovered(true);
-  const handleHoverEnd = () => setIsHovered(false);
-
   return (
     <section
       id="home"
-      className="bg-dark h-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
-      onMouseEnter={handleHoverStart}
-      onMouseLeave={handleHoverEnd}
+      className="bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
     >
-      {/* Spotlight Effect */}
-      <motion.div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gold opacity-30 clip-light"
-        initial={{ width: '2px', height: '500px', opacity: 0.1 }}
-        animate={{
-          width: isHovered ? '640px' : '340px',
-          height: isHovered ? '900px' : '600px',
-          opacity: isHovered ? 0.7 : 0.3,
-        }}
-        transition={{ duration: 0.5 }}
-      />
-
-      {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-center">
-        <motion.h1 className="text-5xl md:text-7xl font-extrabold text-lightGold">
-          Coming
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center px-4">
+        {/* Main Heading */}
+        <motion.h1
+          className="text-6xl md:text-8xl font-bold text-text drop-shadow-lg"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Welcome to Salon Fryzur
         </motion.h1>
-        {isHovered && (
-          <motion.h1
-            className="text-5xl md:text-7xl font-extrabold text-gold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-          >
-            Soon
-          </motion.h1>
-        )}
-        <p className="text-lg md:text-xl text-light mt-4">
-          Experience the best hair care in Poland. Stay tuned!
-        </p>
+
+        {/* Subheading */}
+        <motion.p
+          className="text-xl md:text-2xl text-gray mt-4 max-w-2xl leading-relaxed"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Experience timeless elegance and style with our expert hair care services.
+          Redefine your beauty here at Salon Fryzur.
+        </motion.p>
+
+        {/* Call-to-Action Button */}
+        <motion.a
+          href="#services"
+          className="mt-8 px-8 py-4 bg-text text-hover text-lg font-semibold rounded-lg shadow-md hover:bg-gray transition-all duration-300"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Explore Our Services
+        </motion.a>
       </div>
     </section>
   );
