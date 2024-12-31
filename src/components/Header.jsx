@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const Header = ({ onMenuStateChange }) => {
+const Header = ({ onMenuStateChange, isMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   // Handle scroll behavior
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +13,7 @@ const Header = ({ onMenuStateChange }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Pass the state of the menu to the parent component
+  // Notify parent when menu is toggled
   useEffect(() => {
     onMenuStateChange(isMenuOpen);
   }, [isMenuOpen, onMenuStateChange]);
@@ -34,7 +33,7 @@ const Header = ({ onMenuStateChange }) => {
         {/* Hamburger Menu Icon */}
         <button
           className="block lg:hidden text-text focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => onMenuStateChange(!isMenuOpen)} // Toggle menu state
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {/* Icon */}
@@ -66,7 +65,7 @@ const Header = ({ onMenuStateChange }) => {
         {isMenuOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => onMenuStateChange(false)} // Close menu on overlay click
           ></div>
         )}
 
@@ -79,7 +78,7 @@ const Header = ({ onMenuStateChange }) => {
           {/* Close Button */}
           {isMenuOpen && (
             <button
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => onMenuStateChange(false)} // Close menu on button click
               className="absolute top-4 right-6 text-text text-2xl font-bold z-30 focus:outline-none"
               aria-label="Close Menu"
             >
@@ -92,7 +91,7 @@ const Header = ({ onMenuStateChange }) => {
               <a
                 href={`#${item.toLowerCase()}`}
                 className="text-text font-semibold tracking-wide hover:text-hover transition duration-300"
-                onClick={() => setIsMenuOpen(false)} // Close menu on click
+                onClick={() => onMenuStateChange(false)} // Close menu on click
               >
                 {item}
               </a>
