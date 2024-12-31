@@ -71,6 +71,18 @@ const Header = () => {
             isMenuOpen ? "translate-y-0" : "-translate-y-full"
           } lg:translate-y-0`}
         >
+          {/* Close Button */}
+          {isMenuOpen && (
+            <li className="self-end lg:hidden">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-text text-xl font-bold px-4 py-2 rounded-lg hover:text-hover transition duration-300"
+              >
+                Close ✖
+              </button>
+            </li>
+          )}
+          {/* Navigation Links */}
           {["Home", "Services", "Feedback"].map((item, idx) => (
             <li key={idx}>
               <a
