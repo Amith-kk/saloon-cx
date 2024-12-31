@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
+      className="bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-20" // Added padding-top
     >
       {/* Background Image Carousel */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
