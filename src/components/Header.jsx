@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Header = () => {
+const Header = ({ onMenuStateChange }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,6 +13,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Pass the state of the menu to the parent component
+  useEffect(() => {
+    onMenuStateChange(isMenuOpen);
+  }, [isMenuOpen, onMenuStateChange]);
 
   return (
     <header

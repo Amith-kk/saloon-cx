@@ -6,7 +6,7 @@ import image3 from "../assets/woman-with-protective-face-mask-getting-her-hair-s
 
 const images = [image1, image2, image3];
 
-const Home = () => {
+const Home = ({ menuOpen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Automatically cycle through images
@@ -20,7 +20,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-20" // Added padding-top
+      className={`bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden ${
+        menuOpen ? "mt-20" : "" // Adjust the top margin when the menu is open
+      }`}
     >
       {/* Background Image Carousel */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
