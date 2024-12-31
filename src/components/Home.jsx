@@ -20,7 +20,9 @@ const Home = ({ isMenuOpen }) => {
   return (
     <section
       id="home"
-      className={`bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-20 ${isMenuOpen ? "mt-20" : ""}`} // Add margin-top when menu is open
+      className={`bg-background h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-20 ${
+        isMenuOpen ? "mt-20" : ""
+      }`} // Ensure content shifts down when menu is open
     >
       {/* Background Image Carousel */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">

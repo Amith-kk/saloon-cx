@@ -20,7 +20,7 @@ const Header = ({ onMenuStateChange, isMenuOpen }) => {
 
   return (
     <header
-      className={`fixed w-full z-20 transition-colors duration-300 ${
+      className={`fixed w-full z-30 transition-colors duration-300 ${
         isScrolled ? "bg-background shadow-lg" : "bg-transparent"
       }`}
     >
