@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Services from './components/Service';
+import About from "./components/About";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ function App() {
       {/* Pass handleMenuStateChange to Header and isMenuOpen to Home */}
       <Header onMenuStateChange={handleMenuStateChange} isMenuOpen={isMenuOpen} />
       <Home isMenuOpen={isMenuOpen} />
+      <About />
       <Services />
       <Feedback />
       <Footer />

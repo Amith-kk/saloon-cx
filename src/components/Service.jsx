@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import braids from "../assets/young-person-portrait-photorealistic-style-with-braids.webp";
 import naturalHair from "../assets/portrait-smiling-pretty-woman-with-curly-hair-looking-away.webp";
 import haircut from "../assets/hairstylist-woman-doing-haircut.webp";
@@ -22,7 +22,6 @@ const Services = () => {
         <h2 className="text-4xl font-bold tracking-wide mb-8 text-text">
           Our Services
         </h2>
-
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div

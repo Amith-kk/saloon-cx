@@ -86,7 +86,7 @@ const Header = ({ onMenuStateChange, isMenuOpen }) => {
             </button>
           )}
           {/* Navigation Links */}
-          {["Home", "Services", "Feedback"].map((item, idx) => (
+          {["Home", "Services", "Feedback", "About"].map((item, idx) => (
             <li key={idx}>
               <a
                 href={`#${item.toLowerCase()}`}
