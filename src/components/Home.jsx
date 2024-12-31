@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import image1 from "../assets/man-barbershop-salon-doing-haircut-beard-trim.jpg";
-import image2 from "../assets/hairdresser-barber-shop-styling-hair-client.jpg";
-import image3 from "../assets/woman-with-protective-face-mask-getting-her-hair-styled-hairdresser-virus-epidemic.jpg";
+import image1 from "../assets/man-barbershop-salon-doing-haircut-beard-trim.webp";
+import image2 from "../assets/hairdresser-barber-shop-styling-hair-client.webp";
+import image3 from "../assets/woman-with-protective-face-mask-getting-her-hair-styled-hairdresser-virus-epidemic.webp";
 
 const images = [image1, image2, image3];
 

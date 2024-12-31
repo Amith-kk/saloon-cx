@@ -1,10 +1,10 @@
 import React from 'react';
-import braids from "../assets/young-person-portrait-photorealistic-style-with-braids.jpg";
-import naturalHair from "../assets/portrait-smiling-pretty-woman-with-curly-hair-looking-away.jpg";
-import haircut from "../assets/hairstylist-woman-doing-haircut.jpg";
-import locs from "../assets/pretty-black-woman-with-flowers-jacket-pocket.jpg";
-import silkPress from "../assets/crop-hairdresser-styling-customer.jpg";
-import weaves from "../assets/styled-hair-extensions-beauty-salon.jpg";
+import braids from "../assets/young-person-portrait-photorealistic-style-with-braids.webp";
+import naturalHair from "../assets/portrait-smiling-pretty-woman-with-curly-hair-looking-away.webp";
+import haircut from "../assets/hairstylist-woman-doing-haircut.webp";
+import locs from "../assets/pretty-black-woman-with-flowers-jacket-pocket.webp";
+import silkPress from "../assets/crop-hairdresser-styling-customer.webp";
+import weaves from "../assets/styled-hair-extensions-beauty-salon.webp";
 
 const services = [
   { title: "Braids", image: braids, description: "Intricate and stylish braiding styles." },
