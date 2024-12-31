@@ -73,14 +73,13 @@ const Header = () => {
         >
           {/* Close Button */}
           {isMenuOpen && (
-            <li className="self-end lg:hidden">
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="text-text text-xl font-bold px-4 py-2 rounded-lg hover:text-hover transition duration-300"
-              >
-                Close ✖
-              </button>
-            </li>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-4 right-6 text-text text-2xl font-bold z-30 focus:outline-none"
+              aria-label="Close Menu"
+            >
+              ✖
+            </button>
           )}
           {/* Navigation Links */}
           {["Home", "Services", "Feedback"].map((item, idx) => (
