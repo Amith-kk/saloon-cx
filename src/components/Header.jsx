@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Add this line
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Handle scroll behavior
   useEffect(() => {
@@ -30,6 +30,7 @@ const Header = () => {
         <button
           className="block lg:hidden text-text focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {/* Icon */}
           <svg
@@ -56,9 +57,17 @@ const Header = () => {
           </svg>
         </button>
 
+        {/* Overlay for closing the menu */}
+        {isMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+        )}
+
         {/* Navigation Links */}
         <ul
-          className={`lg:flex lg:space-x-6 flex-col lg:flex-row fixed lg:static left-0 top-0 lg:top-0 lg:bg-transparent bg-background w-full lg:w-auto space-y-4 lg:space-y-0 px-6 lg:px-0 py-20 lg:py-0 z-30 transition-transform transform ${
+          className={`lg:flex lg:space-x-6 flex-col lg:flex-row fixed lg:static left-0 top-0 lg:top-0 lg:bg-transparent bg-background w-full lg:w-auto space-y-4 lg:space-y-0 px-6 lg:px-0 py-20 lg:py-0 z-20 transition-transform transform ${
             isMenuOpen ? "translate-y-0" : "-translate-y-full"
           } lg:translate-y-0`}
         >
