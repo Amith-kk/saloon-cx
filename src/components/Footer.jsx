@@ -2,15 +2,15 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-hover text-text py-8">
+    <footer className="bg-hover text-background py-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Section */}
-          <div className="text-center md:text-left">
-            <p className="text-sm text-text">
+          <div className="text-center text-background md:text-left">
+            <p className="text-sm ">
               &copy; 2024 Salon Fryzur. All rights reserved.
             </p>
-            <p className="text-sm mt-2 text-text">
+            <p className="text-sm mt-2 text-background">
               Designed with care by our creative team.
             </p>
           </div>
@@ -28,12 +28,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mt-6">
           <ul className="flex space-x-6">
             <li>
-              <a href="#" className="text-text hover:text-gold transition">
+              <a href="#" className="text-background hover:text-gold transition">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="text-text hover:text-gold transition">
+              <a href="#" className="text-background hover:text-gold transition">
                 Terms of Service
               </a>
             </li>

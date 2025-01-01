@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#817748", // Light gray-white background 817748 edaf05
-        text: "#fcf8ed",       // Grayish white for text D8D8D8
+        background: 'white', // Light gray-white background 817748 edaf05
+        text: "black",       // Grayish white for text D8D8D8
         hover: "#262625",       // Dark gold for main elements D69B2E
         gray: "#e0dac8",     // Dark gray for accents 3A3A3A
+        card:"#ebecf0"
       },
       fontFamily: {
         sans: ['"Inter"', "sans-serif"],

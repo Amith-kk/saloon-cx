@@ -14,16 +14,16 @@ const About = () => {
             />
           </div>
           <div className="w-full md:w-1/2 text-left pl-8">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-primary text-center">
+            <div className="mb-8 lg:m-20">
+              <h3 className="text-2xl text-text font-bold mb-4 text-primary text-center">
                 About Us
               </h3>
               <p className="text-base text-hover font-semibold mb-6">
                 At Salon Fryzur, we are committed to providing a welcoming environment where every client feels comfortable and stylish. Our team of expert stylists ensures personalized attention and the best services to make you feel rejuvenated.
               </p>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-primary text-center">
+            <div className="mt-8 lg:m-20">
+              <h3 className="text-2xl text-text font-bold mb-4 text-primary text-center">
                 Our Mission
               </h3>
               <p className="text-base font-semibold text-hover">

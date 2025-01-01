@@ -26,7 +26,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-6 bg-text rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-500 relative overflow-hidden"
+              className="group p-6 bg-card rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-500 relative overflow-hidden"
             >
               <div className="w-full h-48 rounded-lg overflow-hidden mb-4">
                 <img

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Feedback = () => {
-  const [review, setReview] = useState('');
-  const [name, setName] = useState('');
+  const [review, setReview] = useState("");
+  const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -10,8 +10,8 @@ const Feedback = () => {
     if (review && name) {
       setSubmitted(true);
       setTimeout(() => {
-        setReview('');
-        setName('');
+        setReview("");
+        setName("");
         setSubmitted(false);
       }, 2000);
     }
@@ -24,11 +24,11 @@ const Feedback = () => {
           Share Your Feedback
         </h2>
         <form
-          className="mt-10 max-w-2xl mx-auto bg-text p-6 rounded-lg shadow-lg"
+          className="mt-10 max-w-2xl mx-auto bg-card p-6 rounded-lg shadow-lg"
           onSubmit={handleSubmit}
         >
           <div className="mb-6">
-            <label htmlFor="name" className="block text-left text-hover mb-2">
+            <label htmlFor="name" className="block text-left text-text mb-2">
               Your Name:
             </label>
             <input
@@ -36,7 +36,7 @@ const Feedback = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 bg-gray text-hover rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+              className="w-full p-3 bg-background text-hover rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
               placeholder="Enter your name"
               required
             />
@@ -49,7 +49,7 @@ const Feedback = () => {
               id="review"
               value={review}
               onChange={(e) => setReview(e.target.value)}
-              className="w-full p-3 bg-gray text-hover rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+              className="w-full p-3 bg-background text-hover rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
               placeholder="Write your review here"
               rows="5"
               required
@@ -57,12 +57,12 @@ const Feedback = () => {
           </div>
           <button
             type="submit"
-            className="px-6 py-3 bg-text text-hover font-semibold rounded-lg hover:bg-gray transition"
+            className="px-6 py-3 bg-text text-card font-semibold rounded-lg shadow-md hover:bg-gold hover:text-background hover:scale-105 transition-all duration-300"
           >
             Submit
           </button>
           {submitted && (
-            <p className="mt-4 text-gray font-semibold animate-bounce">
+            <p className="mt-4 text-text font-semibold animate-bounce">
               Thank you for your feedback!
             </p>
           )}
